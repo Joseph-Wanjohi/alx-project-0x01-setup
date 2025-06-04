@@ -15,7 +15,7 @@ const Users: React.FC<UsersPageProps> = ({ posts }) => {
         <h2 className="text-3xl font-semibold mb-6">Our Users</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((user) => (
-            <UserCard key={user.id} user={user} />
+            <UserCard key={user.id} {...user} /> // Pass the user object as props to the UserCard component{user} />
           ))}
         </div>
       </main>
